@@ -75,7 +75,7 @@ class YamlLint
       return 1
     end
     begin
-      YAML.load_file(file)
+      YAML.load_file(file, aliases: true)
     rescue Exception => err
       error "File : #{file}, error: #{err}"
       return 1
